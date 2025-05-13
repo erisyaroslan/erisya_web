@@ -1,0 +1,707 @@
+/* Reset and base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    height: 100%;
+
+}
+
+/* Background and overlay base */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('images/ligh_teal_background.avif') no-repeat center center/cover;
+    z-index: -2;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Shading */
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1000;
+    background-color: #008080;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 2rem;
+    box-sizing: border-box;
+}
+
+body.home-page,
+body.about-page,
+body.activities-page,
+body.contact-page,
+body.experience-page,
+body.gallery-page {
+    padding-top: 80px; /* height of the navbar */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hero Section */
+body.home-page .hero {
+    height: calc(100vh - 64px); /* Adjust if header height changes */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding: 0 2rem;
+    position: relative;
+    margin-left: 90px;
+    
+}
+
+body.home-page .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+body.home-page .hero-content h1 {
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 0.5px;
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    padding-bottom: 20px;
+    
+}
+
+body.home-page .hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+    margin-right: 0;
+    margin-left: auto;
+    padding-right: 2rem;
+    
+}
+
+/* Button */
+body.home-page .cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #008080;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+body.home-page .cta-button:hover {
+    background-color: #045D5D;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.responsive-image {
+    width: 350px; /* or any fixed square size */
+    height: 350px;
+    object-fit: cover; /* keeps the image properly cropped and scaled */
+    border-radius: 50%;
+    margin-left: 120px;
+}
+
+/*About Page */
+body.about-page .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 100px 40px;
+    gap: 150px;
+    flex-wrap: wrap;
+}
+
+
+body.about-page .image-container {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -20px;
+    margin-left: 120px;
+}
+
+body.about-page .profile-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+body.about-page .profile-image:hover {
+    transform: scale(1.05);
+}
+
+body.about-page .text-container {
+    flex: 1;
+    min-width: 250px;
+    color: #ffffff;
+    max-width: 800px;
+    
+}
+
+body.about-page .text-container h1 {
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    
+}
+
+body.about-page .text-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+    margin-right: 0;
+    margin-left: auto;
+    padding-right: 0.005rem;
+    word-spacing: 4px;
+
+    
+}
+
+body.about-page h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    margin-left: 110px;
+   
+}
+
+body.about-page h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    margin-left: 110px;
+    margin-top: 90px;
+}
+
+body.about-page h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    margin-left: 110px;
+    margin-top: 90px;
+}
+
+
+body.about-page p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+    padding-right: 0.005rem;
+    word-spacing: 4px;
+    margin-left: 110px;
+    margin-right: 110px ;
+    margin-bottom: 40px;
+}
+
+body.about-page .table-container {
+    padding-bottom: 100px;
+}
+
+body.about-page table {
+    border-collapse: collapse;
+    width: 60%; /* Makes the table wider */
+    margin: 80px auto; 
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+body.about-page th {
+    text-align: left;
+    border: 1px solid black;
+    color: #454545;
+    padding: 12px 20px;
+    font-weight: bold;
+}
+
+body.about-page td {
+    text-align: left;
+    border: 1px solid black;
+    color: #454545;
+    padding: 12px 20px;
+    font-weight: 500;
+}
+
+/*Activities Page*/
+body.actvities-page .hero {
+    height: calc(100vh - 64px); /* Adjust if header height changes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    position: relative;
+} 
+
+body.activities-page .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+}
+
+body.activities-page .hero-content h1 {
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 50px;
+    font-size: 3.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    margin-left: 560px;
+    padding-bottom: 20px;
+   
+    
+}
+
+body.activities-page .hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+    margin-right: 0;
+    margin-left: 200px;
+    padding-right: 0.005rem;
+    word-spacing: 4px;
+    
+}
+
+body.activities-page .sports-container {
+    margin-left: 150px;
+    margin-right: 110px;
+}
+
+body.activities-page .sports-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+body.activities-page .sport-item {
+    text-align: center;
+}
+
+body.activities-page .sport-item img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+body.activities-page .sport-item p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    margin-left: 100px;
+    font-weight: 600;
+    color: #454545;
+}
+
+body.activities-page .sports-container h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 70px;
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    
+   
+}
+
+body.activities-page .sports-container h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    padding-top: 70px;
+   
+}
+
+body.activities-page  .sports-container h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    padding-top: 70px;
+}
+
+body.activities-page .sports-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    padding-right: 0.005rem;
+    word-spacing: 4px;
+    margin-right: 110px ;
+    margin-bottom: 40px;
+}
+
+
+/*Contact Page*/
+body.contact-page .hero {
+    height: calc(100vh - 64px); /* Adjust if header height changes */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    position: relative;
+    padding-top: 80px;
+}
+
+body.contact-page .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+}
+
+body.contact-page .hero-content h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    margin-left: 560px;
+    padding-bottom: 20px;
+    
+}
+
+body.contact-page .hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+    margin-right: 0;
+    margin-left: 150px;
+    padding-right: 0.005rem;
+    word-spacing: 4px;
+}
+
+body.contact-page .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px 170px; /* Adjust as needed */
+    gap: 50px;
+}
+
+body.contact-page .contact-me {
+    margin-top: -270px;
+}
+
+body.contact-page .contact-me h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: left;
+    margin-left: 100px;
+    padding-bottom: 20px;
+    
+}
+body.contact-page .contact-icons {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 100px;
+    padding-bottom: 100px;
+}
+
+body.contact-page .contact-icons li {
+    margin: 8px 0;
+    padding-top: 20px;
+}
+
+body.contact-page .contact-icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+
+}
+
+body.contact-page .contact-icons i {
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+body.contact-page .contact-form {
+    flex: 1;
+    max-width: 600px;
+    margin-top: -295px;
+    padding: 30px;
+    background-color: transparent; /* No background color */
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 100px;
+}
+
+/* Form Heading */
+body.contact-page .contact-form h2 {
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Form Group (Position of Label & Input Fields) */
+.floating-form .form-group {
+    margin-bottom: 25px;
+}
+
+/* Input Field Styles */
+.floating-form input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #000;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Textarea Field Styles */
+.floating-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: transparent; /* White background for textarea */
+    color: #000;
+    resize: vertical;
+    min-height: 120px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Label Above Fields */
+.floating-form label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px; /* Spacing between label and input/textarea */
+}
+
+/* Submit Button Styling */
+body.contact-page .contact-form button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #454545;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+body.contact-page .contact-form button:hover {
+    background-color: #333;
+}
+
+
+/*Experience Page*/
+body.experience-page .experience-list {
+    flex: 1;
+    min-width: 250px;
+    color: #ffffff;
+    max-width: 1300px;
+}
+
+body.experience-page .experience-list h1 {
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 50px;
+    font-size: 3.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    margin-left: 560px;
+    padding-bottom: 20px;
+   
+}
+
+body.experience-page .experience-list p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+    margin-right: 0;
+    margin-left: 200px;
+    padding-right: 0.005rem;
+    word-spacing: 4px;
+   
+   
+}
+
+body.experience-page .experience-container {
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    justify-content: space-between;
+    gap: 2rem; /* spacing between columns */
+    padding: 0 5%;
+}
+
+
+body.experience-page .experience-programs  {
+    flex: 1;
+    min-width: 250px;
+    color: #ffffff;
+    max-width: 600px;
+}
+
+body.experience-page .experience-programs h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-left: 110px;
+    padding-bottom: 20px;
+    padding-top: 150px;
+}
+
+body.experience-page .experience-programs ul li {
+    margin-left: 100px; 
+    color: #454545; 
+    font-weight: 600; 
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+body.experience-page .experience-sports  {
+    flex: 1;
+    min-width: 250px;
+    color: #ffffff;
+    max-width: 500px;
+    padding-right: 150px;
+}
+
+body.experience-page .experience-sports h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-left: 50px;
+    padding-bottom: 20px;
+    padding-top: 150px;
+}
+
+body.experience-page .experience-sports ul li {
+    color: #454545; 
+    font-weight: 600; 
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/*Gallery Page*/
+body.gallery-page .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2rem;
+}
+
+body.gallery-page .gallery-item {
+    max-width: 500px;
+    text-align: center;
+}
+
+body.gallery-page h1 {
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 50px;
+    font-size: 3.5rem;
+    color: #454545;
+    margin-bottom: 1rem;
+    text-align: justify;
+    margin-left: 630px;
+    padding-bottom: 20px;
+}
+
+body.gallery-page .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+body.gallery-page .gallery-item .caption {
+    padding-top: 20px;
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #454545;
+}
